@@ -210,10 +210,11 @@ class ZMusicBox extends PluginBase implements Listener{
 						$pk->y = $block->y;
 						$pk->z = $block->z;*/
 						$pk->position = new Vector3($block->x, $block->y, $block->z);
-						$pk->volume = $type;
-						$pk->pitch = $sound;
-						$pk->unknownBool = true;
-						$pk->unknownBool2 = true;
+						//$pk->volume = $type; //old
+						//$pk->pitch = $sound; //old
+						$pk->extraData = $sound; //**new changes**
+						//$pk->unknownBool = true; //old
+						//$pk->unknownBool2 = true; //old 
 						$p->dataPacket($pk);
 					}
 				}
